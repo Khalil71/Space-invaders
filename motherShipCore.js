@@ -71,7 +71,7 @@
 
   // Searching for invader entry point.
   Radar.prototype.invaderExist = function(invader) {
-    /*_hits will have an array of arrays,
+    /*"hits" will have an array of arrays,
     each array contains an object that contains the line number
     and the position of the pattern in
     the line that matches one line of the invader text

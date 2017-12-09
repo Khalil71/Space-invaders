@@ -1,7 +1,7 @@
 const motherShipCore = require("./motherShipCore"),
       alert = require("./alert");
 
-
+//The radar transmission
 var radar=`----o--oo----o--ooo--ooo---------o---oo-o----oo---o--o---------o----o------o----------------o--o--o-
 --o-o-----oooooooo-oooooo-------o----o------ooo-o---o--o----o------o--o---ooo-----o--oo-o------o----
 --o--------oo-ooo-oo-oo-oo------------------ooooo-----o-----o------o---o--o--o-o-o------o----o-o-o--
@@ -52,6 +52,7 @@ o-----oo-------------------o--o-----o-----------o------o-------o----o-----------
 -------o---o------oooooo--o----ooo--o--------o-------o----------------------------oo-oo-o--o--------
 o--oo------o-----oo--o-oo------------oo--o------o--o-------------oo----o------------oooo-o------oo--
 -----o----------ooooooooo--------------oo--------------oo-----o-----o-o--o------o----------o----o---`,
+//The invader pattern to detect
 invader=`---oo---
 --oooo--
 -oooooo-
@@ -61,7 +62,10 @@ oooooooo
 -o-oo-o-
 o-o--o-o`;
 
+//Passing the invader and the radar patterns to the constructor functions
 var newInvader = new motherShipCore.invader(invader),
     newRadar = new motherShipCore.Radar(radar),
+    //Find if the invader pattern exist in the radar pattern
     matches = newRadar.invaderExist(newInvader),
+    //Logging out the result
     warning = new alert.Alert(matches);
