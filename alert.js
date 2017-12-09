@@ -1,3 +1,4 @@
+//constructor function to log out the number of invaders and their location
 function Alert(danger) {
   if(danger.length == 0){
     return console.log("No invaders found");
